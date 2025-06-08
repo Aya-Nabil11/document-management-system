@@ -5,12 +5,11 @@
         <button type="submit" class="btn btn-primary">Search</button>
     </div>
     @if ($documents->count())
-                <table class="table table-bordered">
+                <table class="table table-bordered" border="1">
                     <thead>
                         <tr>
                             <th>Title</th>
                             <th>Preview (matched text)</th>
-                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>

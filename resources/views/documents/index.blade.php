@@ -11,11 +11,12 @@
         {{-- إحصائيات --}}
         <div class="mb-3">
             <strong>Total Documents:</strong> {{ $documents->total() }}<br>
+            <strong>Total Documents size:</strong> {{ $totalSize}} KB<br>
             <strong>Sorting Time:</strong> {{ number_format($timeTaken, 3) }} seconds
         </div>
 
         {{-- جدول المستندات --}}
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped" border="1">
             <thead class="table-light">
                 <tr>
                     <th>Title</th>
@@ -24,7 +25,6 @@
                     <th>Size (KB)</th>
                     <th>Category</th>
                     <th>Created At</th>
-                    <th>Download</th>
                 </tr>
             </thead>
             <tbody>

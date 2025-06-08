@@ -26,9 +26,11 @@ class DocumentController extends Controller
 
     // حساب الزمن المستغرق
     $timeTaken = microtime(true) - $startTime;
+    $totalSize = Document::sum('file_size');
+
 
     // إرسال النتائج للواجهة
-    return view('documents.index', compact('documents', 'timeTaken'));
+    return view('documents.index', compact('documents', 'timeTaken','totalSize'));
 }
 
 
